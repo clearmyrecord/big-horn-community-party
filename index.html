@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RSVP for the Big Horn at Black Mountain community party."
+    />
+
+    <title>Big Horn at Black Mountain | Community Party RSVP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+
+        <div class="hero-inner">
+          <p class="eyebrow">Big Horn at Black Mountain</p>
+
+          <h1>
+            Let’s get<br />
+            <em>together.</em>
+          </h1>
+
+          <p class="hero-copy">
+            Good neighbors, good food, and a great night close to home.
+          </p>
+
+          <a class="button button-light" href="#rsvp">
+            Save my spot <span>↓</span>
+          </a>
+        </div>
+
+        <div class="mountain-art" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <section class="details" aria-labelledby="party-details">
+        <div class="details-heading">
+          <p class="eyebrow accent">You’re invited</p>
+
+          <h2 id="party-details">Big Horn Community Party</h2>
+
+          <p>
+            Come hang out with the neighbors and celebrate our Big Horn
+            community.
+          </p>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-card">
+            <div class="detail-icon">◎</div>
+            <p class="detail-label">When</p>
+            <p>Saturday, October 17th</p>
+            <small>More event-time details to follow</small>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">⌂</div>
+            <p class="detail-label">Where</p>
+            <p>Big Horn at Black Mountain</p>
+            <small>Henderson, Nevada</small>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">✦</div>
+            <p class="detail-label">Bring</p>
+            <p>A dish to share</p>
+            <small>Homemade, store-bought, or anything in between</small>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="rsvp-section"
+        id="rsvp"
+        aria-labelledby="rsvp-heading"
+      >
+        <div class="form-wrap">
+          <div class="form-intro">
+            <p class="eyebrow accent">Count me in</p>
+
+            <h2 id="rsvp-heading">RSVP for the party</h2>
+
+            <p>
+              Tell us who’s coming and what you’d like to bring. We’ll use this
+              to plan the table.
+            </p>
+          </div>
+
+          <form id="rsvp-form">
+            <div class="field-row">
+              <label>
+                First name
+                <input
+                  name="firstName"
+                  autocomplete="given-name"
+                  required
+                  placeholder="Your first name"
+                />
+              </label>
+
+              <label>
+                Last name
+                <input
+                  name="lastName"
+                  autocomplete="family-name"
+                  required
+                  placeholder="Your last name"
+                />
+              </label>
+            </div>
+
+            <label>
+              Email address
+              <span class="optional">(optional)</span>
+
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+              />
+            </label>
+
+            <label>
+              How many people are coming?
+
+              <select name="guests" required>
+                <option value="" disabled selected>
+                  Select a number
+                </option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6+</option>
+              </select>
+            </label>
+
+            <label>
+              What dish are you bringing?
+
+              <input
+                name="dish"
+                required
+                placeholder="e.g., chips and salsa, dessert, salad"
+              />
+            </label>
+
+            <label>
+              Anything else we should know?
+              <span class="optional">(optional)</span>
+
+              <textarea
+                name="notes"
+                rows="3"
+                placeholder="Dietary notes, questions, or a message for the hosts"
+              ></textarea>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" name="consent" required />
+
+              <span>
+                I’m confirming my RSVP for the Big Horn community party.
+              </span>
+            </label>
+
+            <button class="button button-dark" type="submit">
+              Send my RSVP <span>→</span>
+            </button>
+          </form>
+
+          <div id="success" class="success" hidden role="status">
+            <div class="success-mark">✓</div>
+
+            <p class="eyebrow accent">You’re on the list</p>
+
+            <h2>Thanks for RSVPing!</h2>
+
+            <p>
+              We’re looking forward to seeing you at the party. Your dish is
+              noted.
+            </p>
+
+            <button class="text-button" id="another" type="button">
+              Submit another RSVP →
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Big Horn at Black Mountain</p>
+      <p>Made for neighbors, by neighbors.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
